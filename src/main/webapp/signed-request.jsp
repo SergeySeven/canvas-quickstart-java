@@ -74,9 +74,9 @@ POSSIBILITY OF SUCH DAMAGE.
                 Sfdc.canvas.byId('company').innerHTML = sr.context.organization.name;
                 
                  Sfdc.canvas.client.subscribe(sr.client,
-                 {name : 'canvas.submit', onData : function (event) {
-                     Console.log('textvalue' + Sfdc.canvas.byId("speech-input-field").value);
-                    event.textvalue =  Sfdc.canvas.byId("speech-input-field").value;
+                 {name : 'canvas.payload', onData : function (event) {
+                    Console.log('textvalue:' + Sfdc.canvas.byId("speech-input-field").value);
+                   // event.textvalue =  Sfdc.canvas.byId("speech-input-field").value;
                     
                     }}
                 );
