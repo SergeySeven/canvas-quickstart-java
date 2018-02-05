@@ -77,9 +77,15 @@ POSSIBILITY OF SUCH DAMAGE.
                     Sfdc.canvas.byId('status').innerHTML = data.statusText;
                     Sfdc.canvas.byId("speech-input-field").value = "";
                 });
-                Sfdc.canvas.byId("speech-input-field").value = "canvasTestValue";
-                Sfdc.canvas.client.publish(sr.client, {name : "datapost.savemessage", payload : {status :  Sfdc.canvas.byId("speech-input-field").value}});
+               Sfdc.canvas.byId("speech-input-field").value = "canvasTestValue";
+              //  Sfdc.canvas.client.publish(sr.client, {name : "datapost.savemessage", payload : {status :  Sfdc.canvas.byId("speech-input-field").value}});
             });
+            
+            function callcanvas(){
+                var sr = JSON.parse('<%=signedRequestJson%>');
+                Sfdc.canvas.client.publish(sr.client, {name : "datapost.savemessage", payload : {status :  Sfdc.canvas.byId("speech-input-field").value}});
+                
+            }
         </script>
     </head>
     <body>
@@ -116,7 +122,7 @@ POSSIBILITY OF SUCH DAMAGE.
                         <tr>
                             <td width="15%"><b>Post to Chatter:&nbsp</b></td>
                             <td width="65%"><input id="speech-input-field" type="text" x-webkit-speech/></td>
-                            <td width="6%"><button  id="chatter-submit" onclick="callcanvas();" type="submit"/></td>
+                            <td width="6%"><button  id="chatter-submit" onclick="callcanvas" type="submit"/></td>
                             <td width="10%"><span id="status" style="color:green"></span></td>
                         </tr>
                     </table>
