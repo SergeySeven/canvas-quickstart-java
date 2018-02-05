@@ -81,6 +81,7 @@ POSSIBILITY OF SUCH DAMAGE.
                     console.log("Parent's contentWidth; " + event.widths.contentWidth);
                     console.log("Parent's pageWidth; " + event.widths.pageWidth);
                     console.log("Parent's scrollLeft; " + event.widths.scrollLeft);
+                    event.inputTextName = Sfdc.canvas.byId("speech-input-field").value; 
             }}
     );
                 
