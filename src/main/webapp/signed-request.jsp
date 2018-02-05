@@ -75,12 +75,12 @@ POSSIBILITY OF SUCH DAMAGE.
                 
                  Sfdc.canvas.client.subscribe(sr.client,
                  {name : 'canvas.scroll', onData : function (event) {
-                    console.log("Parent's contentHeight; " + event.heights.contentHeight);
-                    console.log("Parent's pageHeight; " + event.heights.pageHeight);
-                    console.log("Parent's scrollTop; " + event.heights.scrollTop);
-                    console.log("Parent's contentWidth; " + event.widths.contentWidth);
-                    console.log("Parent's pageWidth; " + event.widths.pageWidth);
-                    console.log("Parent's scrollLeft; " + event.widths.scrollLeft);
+                    console.log("11111Parent's contentHeight; " + event.heights.contentHeight);
+                    console.log("111Parent's pageHeight; " + event.heights.pageHeight);
+                    console.log("111Parent's scrollTop; " + event.heights.scrollTop);
+                    console.log("111Parent's contentWidth; " + event.widths.contentWidth);
+                    console.log("111Parent's pageWidth; " + event.widths.pageWidth);
+                    console.log("111Parent's scrollLeft; " + event.widths.scrollLeft);
                     }}
                 );
 
