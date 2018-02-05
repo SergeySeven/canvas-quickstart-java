@@ -77,6 +77,8 @@ POSSIBILITY OF SUCH DAMAGE.
                     Sfdc.canvas.byId('status').innerHTML = data.statusText;
                     Sfdc.canvas.byId("speech-input-field").value = "";
                 });
+                
+                Sfdc.canvas.client.publish(sr.client, {name : "datapost.savemessage", payload : {status : 'Completed1234'}});
             });
             
             function callcanvas(){
