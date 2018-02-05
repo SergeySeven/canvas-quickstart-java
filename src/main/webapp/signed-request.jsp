@@ -73,16 +73,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 Sfdc.canvas.byId('email').innerHTML = sr.context.user.email;
                 Sfdc.canvas.byId('company').innerHTML = sr.context.organization.name;
                 
-                Sfdc.canvas.client.subscribe(sr.client, [ 
-                {
-                    name :"mynamespace.myevent0",
-                    payload : {status : 'Closed'}
-                },
-                { 
-                    name:"mynamespace.statusChanged", 
-                    payload : {status : 'Negotiating'}
-                ]);
-                
+               
                 chatterTalk.init(sr, "chatter-submit", "speech-input-field", function(data) {
                     Sfdc.canvas.byId('status').innerHTML = data.statusText;
                     Sfdc.canvas.byId("speech-input-field").value = "";
