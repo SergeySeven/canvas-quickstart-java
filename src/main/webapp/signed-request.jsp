@@ -81,6 +81,8 @@ POSSIBILITY OF SUCH DAMAGE.
             
             function callcanvas(){
                 Sfdc.canvas.client.publish(sr.client, {name : "datapost.savemessage", payload : {status : 'Completed1234'}});
+                Sfdc.canvas.client.subscribe(sr.client,{name : 'datapost.savemessage', onData : function (event) {console.log("Subscribed to custom event ", event);}});
+
             }
 
         </script>
