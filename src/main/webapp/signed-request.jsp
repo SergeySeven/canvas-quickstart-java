@@ -84,10 +84,6 @@ POSSIBILITY OF SUCH DAMAGE.
             
             function callcanvas(){
                 Sfdc.canvas.client.publish(sr.client, {name : "datapost.savemessage", payload : {status : 'Completed1234'}});
-                
-);
-
-            
             }
 
         </script>
