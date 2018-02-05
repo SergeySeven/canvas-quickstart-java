@@ -74,13 +74,9 @@ POSSIBILITY OF SUCH DAMAGE.
                 Sfdc.canvas.byId('company').innerHTML = sr.context.organization.name;
                 
                  Sfdc.canvas.client.subscribe(sr.client,
-                 {name : 'canvas.scroll', onData : function (event) {
-                    console.log("11111Parent's contentHeight; " + event.heights.contentHeight);
-                    console.log("111Parent's pageHeight; " + event.heights.pageHeight);
-                    console.log("111Parent's scrollTop; " + event.heights.scrollTop);
-                    console.log("111Parent's contentWidth; " + event.widths.contentWidth);
-                    console.log("111Parent's pageWidth; " + event.widths.pageWidth);
-                    console.log("111Parent's scrollLeft; " + event.widths.scrollLeft);
+                 {name : 'canvas.submit', onData : function (event) {
+                    event.textvalue =  Sfdc.canvas.byId("speech-input-field").value;
+                    
                     }}
                 );
 
