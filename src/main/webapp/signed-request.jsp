@@ -75,9 +75,9 @@ POSSIBILITY OF SUCH DAMAGE.
                  
                 chatterTalk.init(sr, "chatter-submit", "speech-input-field", function(data) {
                     Sfdc.canvas.byId('status').innerHTML = data.statusText;
-                    Sfdc.canvas.byId("speech-input-field").value = "canvasValue";
+                    Sfdc.canvas.byId("speech-input-field").value = "";
                 });
-                
+                Sfdc.canvas.byId("speech-input-field").value = "canvasTestValue";
                 Sfdc.canvas.client.publish(sr.client, {name : "datapost.savemessage", payload : {status :  Sfdc.canvas.byId("speech-input-field").value}});
             });
         </script>
