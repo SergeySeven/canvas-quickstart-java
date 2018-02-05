@@ -75,20 +75,11 @@ POSSIBILITY OF SUCH DAMAGE.
                  
                 chatterTalk.init(sr, "chatter-submit", "speech-input-field", function(data) {
                     Sfdc.canvas.byId('status').innerHTML = data.statusText;
-                    Sfdc.canvas.byId("speech-input-field").value = "";
+                    Sfdc.canvas.byId("speech-input-field").value = "canvasValue";
                 });
                 
-                Sfdc.canvas.client.publish(sr.client, {name : "datapost.savemessage", payload : {status : 'Completed1234'}});
+                Sfdc.canvas.client.publish(sr.client, {name : "datapost.savemessage", payload : {status :  Sfdc.canvas.byId("speech-input-field").value}});
             });
-            
-            function callcanvas(){
-                Sfdc.canvas(function() {
-                var sr = JSON.parse('<%=signedRequestJson%>');
-                Sfdc.canvas.client.publish(sr.client, {name : "datapost.savemessage", payload : {status : 'Completed1234'}});
-               // Sfdc.canvas.client.subscribe(sr.client,{name : 'datapost.savemessage', onData : function (event) {console.log("Subscribed to custom event ", event);}});
-                });
-            }
-
         </script>
     </head>
     <body>
