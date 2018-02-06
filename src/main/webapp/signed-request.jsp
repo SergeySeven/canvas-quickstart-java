@@ -82,8 +82,30 @@ POSSIBILITY OF SUCH DAMAGE.
             
             function callcanvas(){
               var sr = JSON.parse('<%=signedRequestJson%>');
-              console.log('test sr:',sr);
-              Sfdc.canvas.client.publish(sr.client, {name : "datapost.savemessage", payload : {status :  Sfdc.canvas.byId("speech-input-field").value}});
+             // console.log('test sr:',sr);
+             // Sfdc.canvas.client.publish(sr.client, {name : "datapost.savemessage", payload : {status :  Sfdc.canvas.byId("speech-input-field").value}});
+               var accountInfo = {"Name" : "accountNama"};
+               var requestUrl = 'https://prishepo-lightning-dev-ed.my.salesforce.com/services/data/v39.0/sobjects/Account/';
+               var accountInfoJson = JSON.stringify(accountInfo);
+                 $.ajax({
+                 type: 'POST',
+                 url : requestUrl,
+                 //add the authorization header including the access_token
+                 headers : {
+                 'Authorization' : 'Bearer '+sr.oauthToken,
+         '       'Content-Type' : 'application/json'
+                  },
+                 data : accountInfoJson,
+                 success : function(response){
+                    console.log('test done' + response);
+                            },
+                 error: function(response){
+                     console.log('!test done' +response);
+                            }
+                  });
+                   
+                                  
+                  
             }
         </script>
     </head>
