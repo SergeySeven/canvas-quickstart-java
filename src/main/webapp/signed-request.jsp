@@ -84,6 +84,7 @@ POSSIBILITY OF SUCH DAMAGE.
             function callcanvas(){
                 console.log('11test');
                  Sfdc.canvas(function() {
+                     console.log('22test');
                 var sr = JSON.parse('<%=signedRequestJson%>');
                 Sfdc.canvas.client.publish(sr.client, {name : "datapost.savemessage", payload : {status :  Sfdc.canvas.byId("speech-input-field").value}});
                 });
