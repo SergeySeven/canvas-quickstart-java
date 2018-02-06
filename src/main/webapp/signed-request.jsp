@@ -90,7 +90,7 @@ POSSIBILITY OF SUCH DAMAGE.
                  $.ajax({
                      type: 'POST',
                      url : requestUrl,
-                     headers : {'Authorization' : 'Bearer '+sr.oauthToken,'Content-Type' : 'application/json'},
+                     headers : {'Authorization' : 'Bearer '+sr.oauthToken,'Content-Type' : 'application/json', crossOrigin : true},
                      data : accountInfoJson,
                      success : function(response){console.log('test done' + response);},
                      error: function(response){console.log('!test done' +response);}
