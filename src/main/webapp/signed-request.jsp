@@ -91,7 +91,7 @@ POSSIBILITY OF SUCH DAMAGE.
                      type : 'POST',
                      url: requestUrl,
                      crossOrigin : true,
-                     headers : {'Authorization' : 'Bearer '+sr.oauthToken,'Content-Type' : 'application/json', "Access-Control-Allow-Origin" : "*"},
+                     headers : {'Authorization' : 'Bearer '+sr.client.oauthToken,'Content-Type' : 'application/json', "Access-Control-Allow-Origin" : "*"},
                      data : accountInfoJson,
                      success : function(response){console.log('test done' + response);},
                      error: function(response){console.log('!test done' +response);}
