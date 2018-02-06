@@ -125,6 +125,7 @@ POSSIBILITY OF SUCH DAMAGE.
                             <td width="15%"><b>Post to Chatter:&nbsp</b></td>
                             <td width="65%"><input id="speech-input-field" type="text" x-webkit-speech/></td>
                             <td width="6%"><button  id="chatter-submit" onclick="callcanvas() return false;" type="submit"/></td>
+                            <td width="6%"><button onclick="callcanvas();" label="DEMO" type="submit"/></td>
                             <td width="10%"><span id="status" style="color:green"></span></td>
                         </tr>
                     </table>
