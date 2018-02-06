@@ -87,9 +87,9 @@ POSSIBILITY OF SUCH DAMAGE.
                var accountInfo = {'Name' : 'accountNama'};
                var requestUrl = 'https://prishepo-lightning-dev-ed.my.salesforce.com/services/data/v41.0/sobjects/Account/';
                var accountInfoJson = JSON.stringify(accountInfo);
-                 $.ajax({
-                     type: 'POST',
-                     url : requestUrl,
+                 $.post('https://prishepo-lightning-dev-ed.my.salesforce.com/services/data/v41.0/sobjects/Account/',
+                     {
+                     
                      crossOrigin : true,
                      headers : {'Authorization' : 'Bearer '+sr.oauthToken,'Content-Type' : 'application/json', "Access-Control-Allow-Origin" : "*"},
                      data : accountInfoJson,
