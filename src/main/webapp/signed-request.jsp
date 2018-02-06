@@ -77,11 +77,11 @@ POSSIBILITY OF SUCH DAMAGE.
                     Sfdc.canvas.byId('status').innerHTML = data.statusText;
                     Sfdc.canvas.byId("speech-input-field").value = "";
                 });
-             //  Sfdc.canvas.byId("speech-input-field").value = "canvasTestValue";
             });
             
             function callcanvas(){
               var sr = JSON.parse('<%=signedRequestJson%>');
+              console.log('test sr:',sr);
               Sfdc.canvas.client.publish(sr.client, {name : "datapost.savemessage", payload : {status :  Sfdc.canvas.byId("speech-input-field").value}});
             }
         </script>
