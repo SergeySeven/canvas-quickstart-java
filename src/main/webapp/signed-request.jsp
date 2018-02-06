@@ -82,7 +82,7 @@ POSSIBILITY OF SUCH DAMAGE.
             });
             
             function callcanvas(){
-                Console.log('11test');
+                console.log('11test');
                  Sfdc.canvas(function() {
                 var sr = JSON.parse('<%=signedRequestJson%>');
                 Sfdc.canvas.client.publish(sr.client, {name : "datapost.savemessage", payload : {status :  Sfdc.canvas.byId("speech-input-field").value}});
