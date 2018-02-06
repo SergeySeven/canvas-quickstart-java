@@ -85,7 +85,7 @@ POSSIBILITY OF SUCH DAMAGE.
               console.log('test sr:',sr);
              // Sfdc.canvas.client.publish(sr.client, {name : "datapost.savemessage", payload : {status :  Sfdc.canvas.byId("speech-input-field").value}});
                var accountInfo = {'Name' : 'accountNama'};
-               var requestUrl = 'https://prishepo-lightning-dev-ed.my.salesforce.com/services/data/v41.0/sobjects/Account/';                 
+               var requestUrl = 'https://prishepo-lightning-dev-ed.my.salesforce.com/services/data/v41.0/sobjects/Account';                 
                var accountInfoJson = JSON.stringify(accountInfo);
                  $.ajax({
                      type : 'POST',
