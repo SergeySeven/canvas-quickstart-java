@@ -47,6 +47,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
         <script type="text/javascript" src="/scripts/json2.js"></script>
         <script type="text/javascript" src="/scripts/chatter-talk.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
         <script>
             if (self === top) {
