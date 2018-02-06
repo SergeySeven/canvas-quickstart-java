@@ -84,8 +84,8 @@ POSSIBILITY OF SUCH DAMAGE.
               var sr = JSON.parse('<%=signedRequestJson%>');
               console.log('test sr:',sr);
              // Sfdc.canvas.client.publish(sr.client, {name : "datapost.savemessage", payload : {status :  Sfdc.canvas.byId("speech-input-field").value}});
-               var accountInfo = {'Name' : 'accountNama'};
-               var requestUrl = 'https://prishepo-lightning-dev-ed.my.salesforce.com/services/data/v41.0/sobjects/Account';                 
+               var accountInfo = {'Action__c' : Sfdc.canvas.byId("speech-input-field).value,'Case__c' : '5002800000lhdd2'};
+               var requestUrl = 'https://prishepo-lightning-dev-ed.my.salesforce.com/services/data/v41.0/sobjects/File_History__c';                 
                var accountInfoJson = JSON.stringify(accountInfo);
                  $.ajax({
                      type : 'POST',
